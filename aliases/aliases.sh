@@ -7,7 +7,7 @@ alias ..='cd ..'
 # Git aliases
 alias gs='git status'
 alias g='git'
-alias aic='aicommits -g 3'
+alias aic='aicommits --type conventional -g 3'
 alias ship='gs && ga * && aic && gp'
 
 # Python aliases
