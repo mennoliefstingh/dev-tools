@@ -8,12 +8,22 @@ alias gs='git status'
 alias g='git'
 alias gi='echo ${1} >> .gitignore'
 alias aic='aicommits --type conventional -g 3'
-alias fix='isort . && black .'
+alias fix='ruff .'
 
 # Python aliases
 alias py='python3'
-alias v='venv && source .venv/bin/activate'
+alias v='uv venv && . .venv/bin/activate'
 alias d='deactivate'
+alias pip='uv pip'
+
+# cli stuff
+alias ls="eza -bh --no-user --no-permissions -h --time-style='+%d-%m-%y
+%d-%m %H:%M' --sort=modified --smart-group --git-repos"
+alias lsl="ls --long"
+
+# ...
+alias spoti='spotify_player'
+alias kali="osascript -e open location 'utm://start?name=kali'"
 
 # Docker aliases
 alias dc='docker-compose'
