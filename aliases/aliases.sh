@@ -16,10 +16,15 @@ alias v='uv venv && . .venv/bin/activate'
 alias d='deactivate'
 alias pip='uv pip'
 
+# Rust aliases
+alias cb='cargo build && cargo run'
+
 # cli stuff
 alias ls="eza -bh --no-user --no-permissions -h --time-style='+%d-%m-%y
 %d-%m %H:%M' --sort=modified --smart-group --git-repos"
 alias lsl="ls --long"
+alias cat='bat'
+alias cd='cd'
 
 # ...
 alias spoti='spotify_player'
@@ -32,9 +37,9 @@ alias db='docker build . -t'
 alias dps='docker ps'
 
 # Shell config
-alias zshconfig="code ~/.zshrc"
-alias cliconfig="code ~/cli-setup"
-alias reload='chmod +x ~/cli-setup/ && source ~/.zshrc'
+alias zshconfig="code ~/.zshrc && read -r -p 'press any key when finished editing...' key && source ~/.zshrc"
+alias cliconfig="code ~/.cli && read -r -p 'press any key when finished editing...' key && chmod +x ~/.cli && source ~/.zshrc"
+alias reload='chmod +x ~/.cli && source ~/.zshrc'
 
 # SSH aliases
 alias pi='ssh menno@192.168.1.147'
